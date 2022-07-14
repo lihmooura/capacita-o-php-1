@@ -70,7 +70,6 @@ $Candidatos = [
     ],
 ];
 
-
 $imc = $paciente['peso']/($paciente['altura'] * $paciente['altura']);
 echo "Resultado do IMC do paciente é: $imc" . PHP_EOL;
 
@@ -87,7 +86,9 @@ foreach ($Candidatos as  $candidato) {
     } else {
         echo "acima do recomendado" . PHP_EOL;
     }
-    }
+
+}
+
 
 foreach ($Candidatos as $candidato) {
     ['nome' => $nome, 'idade' => $idade] = $candidato;
