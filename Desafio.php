@@ -79,16 +79,17 @@ foreach ($Candidatos as  $candidato) {
 
     echo "Resultado do IMC do $nome é: $imc. Sendo assim está ";
 
+    // Poderia ser feito um switch case, mas if também funciona
     if ($imc < 18) {
         echo "abaixo do recomendado" . PHP_EOL;
     } else if ($imc < 24) {
         echo "dentro do recomendado" . PHP_EOL;
     } else {
+        // Sobrepeso não é obesidade, teria que ter mais uma condição
         echo "acima do recomendado" . PHP_EOL;
     }
 
 }
-
 
 foreach ($Candidatos as $candidato) {
     ['nome' => $nome, 'idade' => $idade] = $candidato;
@@ -99,7 +100,7 @@ foreach ($Candidatos as $candidato) {
     }
 }
 
-
+// Caso precisasse mudar o paciente, e assim o tipo sanguineo, não seria possível reutilizar essa parte d código sem ajuste de dev
 $tipoSanguineoCompativel = ['O+', 'O-', 'A+', 'A-'];
 foreach ($Candidatos as $candidato) {
     ['nome' => $nome, 'tipoSanguineo' => $tipoSanguineo] = $candidato;
@@ -109,18 +110,3 @@ foreach ($Candidatos as $candidato) {
         echo "$nome não é compatível com o tipo sanguíneo do paciente." . PHP_EOL;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
